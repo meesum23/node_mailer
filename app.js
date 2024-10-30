@@ -1,4 +1,3 @@
-// console.log("App is working");
 const express = require('express');
 const nodemailer = require('nodemailer');
 const PORT = 5000;
@@ -11,14 +10,14 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "meesum.24aug24webgpt@gmail.com", // Use the same email here
+        user: "meesum.24aug24webgpt@gmail.com", 
         pass: "ppea gfom fmlz djnh" // Your app password
     },
 });
 
 // Generate OTP
 function OTPgeneration() {
-    return Math.floor(1000 + Math.random() * 999999).toString(); // 4-digit OTP generation
+    return Math.floor(1000 + Math.random() * 999999).toString(); // 6-digit OTP generation
 }
 
 // API Route to send OTP
